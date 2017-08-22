@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import sys
 from urlparse import urlparse
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
@@ -48,6 +49,7 @@ class InventusSpider(CrawlSpider):
                         break
                     elif len(self.subdomains) <= int(self.subdomain_limit):
                         print parsed_uri.netloc
+                        sys.stdout.flush()
 
                 yield Request(url, callback=self.parse)
 
