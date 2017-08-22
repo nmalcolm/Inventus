@@ -1,0 +1,3 @@
+*.pyc
+inventus.log
+.scrapy/
