@@ -1,14 +1,20 @@
 # Inventus
 
-Inventus is a spider designed to find subdomains of a specific domain by crawling it and any subdomains it finds. It's a Scrapy spider, meaning it's easily modified and extendable to your needs.
+Inventus is a spider designed to find subdomains of a specific domain by crawling it and any subdomains it finds. It's a [Scrapy](https://scrapy.org/) spider, meaning it's easily modified and extendable to your needs.
 
 # Demo
 
 [![asciicast](https://asciinema.org/a/PGIeEpEwZTUdgxrolBpCjljHL.png)](https://asciinema.org/a/PGIeEpEwZTUdgxrolBpCjljHL)
 
+# Requirements
+
+ - Linux -- I haven't tested this on Windows.
+ - Python 2.7 or Python 3.3+
+ - [Scrapy](https://scrapy.org/) 1.4.0 or above.
+
 # Installation
 
-To install Inventus you need to first install Scrapy. Once Scrapy is installed, simply clone the repo and you should be good to go.
+To install Inventus you need to first install [Scrapy](https://scrapy.org/). Once Scrapy is installed, simply clone the repo and you should be good to go.
 
 ```
 $ git clone https://github.com/nmalcolm/Inventus
