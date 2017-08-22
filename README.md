@@ -37,6 +37,12 @@ The only other parameter you can pass is `subdomain_limit`. This sets a max limi
 $ scrapy crawl inventus -a domain=facebook.com -a subdomain_limit=100
 ```
 
+Configurations can be made to how Inventus behaves. For example, by default Inventus will ignore robots.txt, has a 30 second timeout, caches crawl data for a week, and has a 0.25 second delay between requests. These and more can all be changed by editing the `inventus_spider/settings.py` file. Scrapy's settings are [well documented](https://doc.scrapy.org/en/latest/topics/settings.html#aws-access-key-id) too.
+
+# Bugs / Suggestions / Feedback
+
+Feel free to open a new issue for any of the above. Inventus was built in only a few hours and will likely contain bugs. You can also connect with me on [Twitter](https://twitter.com/NathOnSecurity).
+
 # License
 
 Released under the MIT License. See LICENSE.
