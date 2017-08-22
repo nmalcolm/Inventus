@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'inventus_spider.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Inventus/1.0'
+USER_AGENT = 'Inventus/1.0 (+https://github.com/nmalcolm/Inventus)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
