@@ -6,6 +6,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.selector import Selector
 from scrapy.http import Request
 from scrapy.exceptions import CloseSpider
+from inventus_spider.items import InventusSpiderItem
 
 class InventusSpider(CrawlSpider):
     name = 'inventus'
@@ -33,6 +34,7 @@ class InventusSpider(CrawlSpider):
         self.subdomain_limit = subdomain_limit
 
     def parse_item(self, response):
+        item = InventusSpiderItem()
         for url in Selector(text=response.body).xpath('//a/@href').extract():
             if not url.startswith('http://') or url.startswith('https://'):
                 url = self.base_url + url
@@ -44,12 +46,11 @@ class InventusSpider(CrawlSpider):
             if parsed_uri.netloc.endswith('.' + self.domain) and 'mailto:' not in url:
                 if not parsed_uri.netloc in self.subdomains:
                     self.subdomains.append(parsed_uri.netloc)
+                    item['subdomain'] = parsed_uri.netloc
+                    yield item
 
                     if len(self.subdomains) > int(self.subdomain_limit):
                         break
-                    elif len(self.subdomains) <= int(self.subdomain_limit):
-                        print parsed_uri.netloc
-                        sys.stdout.flush()
 
                 yield Request(url, callback=self.parse)
 

@@ -10,5 +10,5 @@ import scrapy
 
 class InventusSpiderItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    subdomain = scrapy.Field()
     pass
