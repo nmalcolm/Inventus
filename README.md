@@ -1,6 +1,6 @@
 # Inventus
 
-Inventus is a spider designed to find subdomains of a specific domain by crawling it and any subdomains it finds. It's a [Scrapy](https://scrapy.org/) spider, meaning it's easily modified and extendable to your needs.
+Inventus is a spider designed to find subdomains of a specific domain by crawling it and any subdomains it discovers. It's a [Scrapy](https://scrapy.org/) spider, meaning it's easily modified and extendable to your needs.
 
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 
