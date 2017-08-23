@@ -33,11 +33,27 @@ $ scrapy crawl inventus -a domain=facebook.com
 
 This tells Scrapy which spider to use ("inventus" in this case), and passes the domain to the spider. Any subdomains found will be sent to `STDOUT`.
 
-The only other parameter you can pass is `subdomain_limit`. This sets a max limit of subdomains to discover before quitting. The default value is 10000, but isn't a hard limit.
+The other custom parameter is `subdomain_limit`. This sets a max limit of subdomains to discover before quitting. The default value is 10000, but isn't a hard limit.
 
 ```
 $ scrapy crawl inventus -a domain=facebook.com -a subdomain_limit=100
 ```
+
+# Exporting
+
+Exporting data can be done in multiple ways. The easiest way is redirecting `STDOUT` to a file.
+
+```
+$ scrapy crawl inventus -a domain=facebook.com > facebook.txt
+```
+
+Scrapy has a built-in feature which allows you to export items into various formats, including CSV, JSON, and XML. Currently only subdomains will be exported, however this may change in the future.
+
+```
+$ scrapy crawl inventus -a domain=facebook.com -t csv -o Facebook.csv
+```
+
+# Configuration
 
 Configurations can be made to how Inventus behaves. For example, by default Inventus will ignore robots.txt, has a 30 second timeout, caches crawl data for a week, and has a 0.25 second delay between requests. These and more can all be changed by editing the `inventus_spider/settings.py` file. Scrapy's settings are [well documented](https://doc.scrapy.org/en/latest/topics/settings.html#aws-access-key-id) too.
 
