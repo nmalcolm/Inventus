@@ -16,11 +16,20 @@ Inventus is a spider designed to find subdomains of a specific domain by crawlin
 
 # Installation
 
-To install Inventus you need to first install [Scrapy](https://scrapy.org/). Once Scrapy is installed, simply clone the repo and you should be good to go.
+Inventus requires [Scrapy](https://scrapy.org/) to be installed before it can be run. Firstly, clone the repo and enter it.
 
 ```
 $ git clone https://github.com/nmalcolm/Inventus
+$ cd Inventus
 ```
+
+Now install the required dependencies using `pip`.
+
+```
+$ pip install -r requirements.txt
+```
+
+Assuming the installation succeeded, Inventus should be ready to use.
 
 # Usage
 
