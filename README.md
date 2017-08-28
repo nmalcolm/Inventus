@@ -64,7 +64,7 @@ $ scrapy crawl inventus -a domain=facebook.com -t csv -o Facebook.csv
 
 # Configuration
 
-Configurations can be made to how Inventus behaves. For example, by default Inventus will ignore robots.txt, has a 30 second timeout, caches crawl data for a week, and has a 0.25 second delay between requests. These and more can all be changed by editing the `inventus_spider/settings.py` file. Scrapy's settings are [well documented](https://doc.scrapy.org/en/latest/topics/settings.html#aws-access-key-id) too.
+Configurations can be made to how Inventus behaves. By default Inventus will ignore robots.txt, has a 30 second timeout, caches crawl data for 24 hours, has a crawl depth of 5, and uses Scrapy's AutoThrottle extension. These and more can all be changed by editing the `inventus_spider/settings.py` file. Scrapy's settings are [well documented](https://doc.scrapy.org/en/latest/topics/settings.html#aws-access-key-id) too.
 
 # Bugs / Suggestions / Feedback
 
